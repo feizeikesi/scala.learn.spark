@@ -12,6 +12,4 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-streaming-kafka_2.10" % "1.6.0"
 )
 
-test in assembly := {}
-
 packAutoSettings
