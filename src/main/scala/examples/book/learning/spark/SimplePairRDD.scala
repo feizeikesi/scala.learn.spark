@@ -1,6 +1,6 @@
 package examples.book.learning.spark
 
-import org.apache.spark.{ SparkConf, SparkContext }
+import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 
 /**
   * Created by Lei on 2016-6-6.
@@ -71,5 +71,20 @@ object SimplePairRDD {
       (acc1:(Int,Int),acc2:(Int,Int))=>(acc1._1+acc2._1,acc1._2+acc2._2)
     ).map(x=>(x._1,x._2._1/x._2._2)).collect()//Array((1,2), (3,5))
 
+    //Join
+    paris.join(other).collect()//Array((3,(4,9)), (3,(6,9)))
+
+    //左连接
+    paris.leftOuterJoin(other).collect()//Array((1,(2,None)), (3,(4,Some(9))), (3,(6,Some(9))))
+
+    //右连接
+    paris.rightOuterJoin(other).collect()// Array((3,(Some(4),9)), (3,(Some(6),9)))
+
+    //获取RDD分区
+    paris.partitioner
+
+    val partitioned=paris.partitionBy(new HashPartitioner(2))
+
+    paris.partitioner
   }
 }
