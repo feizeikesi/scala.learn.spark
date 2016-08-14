@@ -1,11 +1,8 @@
-package scala.learn.akka.cto;
+package scala.learn.akka.java.cto;
 
-import akka.actor.Actor;
 import akka.actor.ActorRef;
-import akka.actor.ActorRef$;
 import akka.actor.UntypedActor;
 
-import javax.xml.crypto.Data;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,8 +18,8 @@ public class ReduceActor extends UntypedActor {
 
     @Override
     public void onReceive(Object message) throws Exception {
-        if (message instanceof MapData) {
-            MapData mapData = (MapData) message;
+        if (message instanceof scala.learn.akka.cto.MapData) {
+            scala.learn.akka.cto.MapData mapData = (scala.learn.akka.cto.MapData) message;
             ReduceData reduceData = reduce(mapData.getDataList());
             aggregateActor.tell(reduceData,null);
         }else

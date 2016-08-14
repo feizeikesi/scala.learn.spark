@@ -1,4 +1,4 @@
-package scala.learn.akka.cto;
+package scala.learn.akka.java.cto;
 
 import akka.actor.ActorRef;
 import akka.actor.Props;

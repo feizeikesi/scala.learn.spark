@@ -1,4 +1,4 @@
-package scala.learn.akka.cto;
+package scala.learn.akka.java.cto;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import java.util.List;
  */
 
 //
-public class MapData {
+public class MapData extends scala.learn.akka.cto.MapData {
     private List<WordCount> dataList;
 
     public List<WordCount> getDataList() {
