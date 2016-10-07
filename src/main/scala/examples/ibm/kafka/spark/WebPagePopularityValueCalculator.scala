@@ -1,9 +1,8 @@
 package examples.ibm.kafka.spark
 
-import org.apache.spark.rdd.RDD
+import org.apache.spark.SparkConf
 import org.apache.spark.streaming.kafka.KafkaUtils
-import org.apache.spark.streaming.{Duration, Seconds, StreamingContext}
-import org.apache.spark.{HashPartitioner, SparkConf}
+import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
   * Created by lvshujing on 16/5/23.
