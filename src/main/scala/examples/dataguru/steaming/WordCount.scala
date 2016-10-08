@@ -8,12 +8,13 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
   */
 object WordCount {
   def main(args: Array[String]) {
-    val conf=new SparkConf().setAppName("Word Count")
-    val ssc=new StreamingContext(conf,Seconds(1))
-    val lines =ssc.socketTextStream("master.hadoop.tlz",9999)
-     lines.map( line =>if (line.split(" ").length>0) Some(line) else None)
+    val conf = new SparkConf().setAppName("Word Count")
+    val ssc = new StreamingContext(conf, Seconds(1))
+    val lines = ssc.socketTextStream("master.hadoop.tlz", 9999)
+    lines
+      .map(line => if (line.split(" ").length > 0) Some(line) else None)
       .filter(_.isDefined)
-        .saveAsTextFiles("msg")
+      .saveAsTextFiles("msg")
 
     ssc.start()
     ssc.awaitTermination()

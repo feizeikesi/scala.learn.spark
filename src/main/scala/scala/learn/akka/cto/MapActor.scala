@@ -10,7 +10,7 @@ class MapActor extends UntypedActor{
 
   override def onReceive(message: Any): Unit = {
     message match {
-      case ms:String=>_
+      case ms:String=>
       case _=>unhandled(message)
     }
   }

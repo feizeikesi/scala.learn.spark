@@ -6,7 +6,7 @@ import scala.collection.immutable.HashMap
   * Created by Lei on 2016-8-11.
   */
 case class MapData(dataList: List[WordCount])  {
-  def this
+  //def this
 }
 
 case class WordCount(word: String, count: Int)
