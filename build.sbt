@@ -12,8 +12,8 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-core_2.10" % "1.6.0" % "provided",
   "org.apache.spark" % "spark-streaming_2.10" % "1.6.0",
   "org.apache.spark" % "spark-streaming-kafka_2.10" % "1.6.0",
-
-
+  "org.apache.spark" % "spark-sql_2.10" % "1.6.0",
+  "org.apache.spark" % "spark-mllib_2.10" % "1.6.0",
 
   "com.twitter" % "util-collection_2.10" % "6.34.0"
 )

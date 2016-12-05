@@ -92,6 +92,4 @@ object LogStatistics {
 
     ssc.start()
     ssc.awaitTermination()
->>>>>>> 59e5cf040940bd6abf61ee01aca16ad0e3e6bd9b
-  }
 }

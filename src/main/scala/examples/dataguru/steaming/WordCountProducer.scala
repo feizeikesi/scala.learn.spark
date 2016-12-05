@@ -1,11 +1,5 @@
 package examples.dataguru.steaming
 
-<<<<<<< HEAD
-/**
-  * Created by Lei on 2016-8-28.
-  */
-=======
->>>>>>> 59e5cf040940bd6abf61ee01aca16ad0e3e6bd9b
 import java.io.PrintStream
 import java.net.Socket
 
@@ -43,9 +37,5 @@ trait LoanPattern {
       ignoring(classOf[Throwable]).apply(r.close())
     }
   }
+}
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 59e5cf040940bd6abf61ee01aca16ad0e3e6bd9b
